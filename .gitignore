@@ -2,3 +2,9 @@ venv/
 __pycache__/
 .settings/
 .mypy_cache/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.idea/
+.vscode/

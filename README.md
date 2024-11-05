@@ -23,4 +23,4 @@ Follow these instructions to set up the project locally.
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     pip install -r requirements.txt
     pre-commit install
-    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+    uvicorn main:app --reload --host 0.0.0.0 --port 8000

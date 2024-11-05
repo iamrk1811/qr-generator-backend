@@ -1,0 +1,27 @@
+# Exclude the virtual environment directory
+venv/
+
+# Exclude Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Exclude local environment configuration files
+.env
+*.env
+
+# Exclude any git-related files
+.git
+.gitignore
+
+# Exclude Dockerignore itself if you want
+.dockerignore
+
+# Exclude other unnecessary files or directories
+*.md
+.DS_Store
+.idea/
+.vscode/
+.settings/
+.mypy_cache/

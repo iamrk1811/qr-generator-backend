@@ -3,9 +3,10 @@ from PIL import Image
 from fastapi import HTTPException, APIRouter
 from io import BytesIO
 import base64
-from app.models import SpaceQRRequest
+from qr_generator_backend.app.models import SpaceQRRequest
+import os
 
-LOGO_PATH = "qc-logo.png"
+LOGO_PATH = os.getenv("QR_LOGO_PATH")
 router = APIRouter()
 
 
