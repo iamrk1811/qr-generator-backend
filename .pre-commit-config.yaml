@@ -1,0 +1,30 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0  # Use the latest stable version of pre-commit-hooks
+    hooks:
+      - id: trailing-whitespace  # Removes trailing whitespace
+      - id: end-of-file-fixer    # Ensures files end with a newline
+      - id: check-yaml           # Checks YAML file validity
+      - id: check-json           # Checks JSON file validity
+
+  - repo: https://github.com/psf/black
+    rev: 23.1.0  # Use the latest stable version of Black
+    hooks:
+      - id: black  # Formats code with Black
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0  # Use the latest stable version of Flake8
+    hooks:
+      - id: flake8  # Lints code with Flake8
+        args: ["--max-line-length=88"]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.4.1  # Use the latest stable version of mypy
+    hooks:
+      - id: mypy  # Static type checking
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.7.10'
+    hooks:
+    - id: bandit
