@@ -5,13 +5,13 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy the requirements file into the container
-COPY requirements.txt .
+COPY qr_generator_backend/requirements.txt .
 
 # Install any necessary dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the code into the container
-COPY . .
+COPY qr_generator_backend .
 # Set PYTHONPATH
 ENV PYTHONPATH=/app
 
