@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from qr_generator_backend.app.api.v1.qr import router as qr_router
+from app.api.v1.qr import router as qr_router
 
 
 app = FastAPI(title="QR Code Generator API")
