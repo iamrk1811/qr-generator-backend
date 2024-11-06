@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the code into the container
-COPY ./* .
+COPY . .
 # Set PYTHONPATH
 ENV PYTHONPATH=/app
 
@@ -19,4 +19,4 @@ ENV PYTHONPATH=/app
 EXPOSE 8000
 
 # Run the FastAPI app with uvicorn
-CMD ["uvicorn", "qr_generator_backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
